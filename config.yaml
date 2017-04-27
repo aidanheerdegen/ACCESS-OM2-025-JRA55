@@ -1,13 +1,13 @@
 # PBS configuration
-queue: expressbw
-project: x77
-walltime: 05:00:00
+queue: express
+project: v45
+walltime: 01:00:00
 jobname: access-om-025
 ncpus: 1153
 memory: 2000Gb
 
-platform:
-   nodesize: 28
+# platform:
+#    nodesize: 28
 
 
 laboratory: /short/v45/aph502/COSIMA/access-om
@@ -30,7 +30,7 @@ submodels:
     - name: atmosphere
       model: matm
       exe: matm_cice.exe
-      input: jra55-0.8_025
+      input: jra55-0.8_025_nc3
       ncpus: 1
 
     - name: ocean
@@ -47,12 +47,11 @@ submodels:
       input: cice
       ncpus: 192
 
-
 calendar:
     runtime:
         years: 0
         months: 0
-        days: 20
+        days: 30
 
     start:
         year: 1
@@ -67,4 +66,4 @@ runlog: true
 
 debug: false
 
-ipm: 2.0.5
+# ipm: 2.0.5
